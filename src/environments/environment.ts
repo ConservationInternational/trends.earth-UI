@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api.resilienceatlas.org'
+  apiUrl: 'https://api-staging.trends.earth'
 };
