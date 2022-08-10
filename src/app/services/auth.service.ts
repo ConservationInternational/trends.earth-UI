@@ -11,16 +11,16 @@ export class TokenService {
 
     set token(token:string){
         if (!token) {
-            localStorage.removeItem('gef-token');
+            localStorage.removeItem('trendsearth-token');
         } else {
-            localStorage.setItem('gef-token', token);
+            localStorage.setItem('trendsearth-token', token);
         }
         this._token = token;
     }
 
     get token(){
         if (!this._token) {
-            this._token = localStorage.getItem('gef-token');
+            this._token = localStorage.getItem('trendsearth-token');
         }
         return this._token;
     }

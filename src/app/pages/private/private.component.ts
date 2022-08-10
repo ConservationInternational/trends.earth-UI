@@ -3,7 +3,7 @@ import { LoadingInterceptor } from "app/services/loading-interceptor.service";
 import { AuthService } from 'app/services/auth.service';
 
 @Component({
-  selector: 'gef-private',
+  selector: 'trendsearth-private',
   templateUrl: './private.component.html',
   styleUrls: ['./private.component.scss']
 })

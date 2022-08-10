@@ -10,7 +10,7 @@ import { AuthService } from "app/services/auth.service";
   }
 
 @Component({
-  selector: 'gef-recover-password',
+  selector: 'trendsearth-recover-password',
   templateUrl: './recover-password.component.html',
   styleUrls: ['./recover-password.component.scss']
 })

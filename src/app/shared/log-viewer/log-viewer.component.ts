@@ -8,7 +8,7 @@ import { ScriptLogModel } from "app/models/script-log.model";
 
 
 @Component({
-    selector: 'gef-log-viewer',
+    selector: 'trendsearth-log-viewer',
     templateUrl: './log-viewer.component.html',
     styleUrls: [
         './log-viewer.component.scss'

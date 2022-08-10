@@ -13,7 +13,7 @@ import { AuthService } from 'app/services/auth.service';
 }
 
 @Component({
-    selector: 'gef-create-user',
+    selector: 'trendsearth-create-user',
     templateUrl: './create-user.component.html',
     styleUrls: ['./create-user.component.scss']
 })

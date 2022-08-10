@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 import { AuthService } from "app/services/auth.service";
 
 @Component({
-    selector: 'gef-header',
+    selector: 'trendsearth-header',
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })

@@ -13,7 +13,7 @@ import { UserService } from "app/services/user.service";
 }
 
 @Component({
-    selector: 'gef-update-user',
+    selector: 'trendsearth-update-user',
     templateUrl: './update-user.component.html',
     styleUrls: ['./update-user.component.scss']
 })

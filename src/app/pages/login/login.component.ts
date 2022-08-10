@@ -10,7 +10,7 @@ import { AuthService } from "app/services/auth.service";
   }
 
 @Component({
-  selector: 'gef-login',
+  selector: 'trendsearth-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
