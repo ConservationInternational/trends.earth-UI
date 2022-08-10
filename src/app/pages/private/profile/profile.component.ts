@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { UserService } from "app/services/user.service";
 
 @Component({
-  selector: 'gef-ui-profile',
+  selector: 'trendsearth-ui-profile',
   templateUrl: 'profile.component.html'
 })
 export class ProfileComponent {

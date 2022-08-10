@@ -9,7 +9,7 @@ import { ActivatedRoute } from "@angular/router";
 import { LogViewerComponent } from "app/shared/log-viewer/log-viewer.component";
 
 @Component({
-  selector: 'gef-ui-execution',
+  selector: 'trendsearth-ui-execution',
   templateUrl: './execution.component.html',
   styleUrls: [
     './execution.component.scss'
