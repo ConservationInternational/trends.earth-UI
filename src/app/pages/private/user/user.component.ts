@@ -9,7 +9,7 @@ import { Observer } from "rxjs/Rx";
 import { AuthService } from 'app/services/auth.service';
 
 @Component({
-  selector: 'gef-ui-user',
+  selector: 'trendsearth-ui-user',
   templateUrl: './user.component.html',
   styleUrls: [
     './user.component.scss'

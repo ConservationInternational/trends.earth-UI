@@ -1,5 +1,5 @@
 {
-  "name": "gef-ui",
+  "name": "trendsearth-ui",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-prod": "ng build -prod -sm -ec -bh",
-    "deploy": "ng build -prod -sm -ec -bh /GEF-UI/ && gh-pages -d dist"
+    "deploy": "ng build -prod -sm -ec -bh /trendsearth-ui/ && gh-pages -d dist"
   },
   "private": true,
   "dependencies": {

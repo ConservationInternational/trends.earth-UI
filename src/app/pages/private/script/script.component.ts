@@ -11,7 +11,7 @@ import { ScriptModel } from "app/models/script.model";
 import { ExecScriptComponent } from "app/pages/private/script/exec-script/exec-script.component";
 
 @Component({
-  selector: 'gef-ui-script',
+  selector: 'trendsearth-ui-script',
   templateUrl: './script.component.html',
   styleUrls: [
     './script.component.scss'
