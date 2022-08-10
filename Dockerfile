@@ -5,8 +5,7 @@ COPY package.json package-lock.json ./
 RUN apk add --no-cache git python make g++
 RUN npm install
 COPY . .
-RUN npm run build
-#ENTRYPOINT ["/bin/sh"]
+RUN npm run build-prod
 
 ### STAGE 2: Run ###
 FROM nginx:1.23.1-alpine
