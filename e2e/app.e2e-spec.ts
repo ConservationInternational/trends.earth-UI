@@ -1,10 +1,10 @@
-import { GEFUIPage } from './app.po';
+import { TrendsEarthPage } from './app.po';
 
 describe('gef-ui App', () => {
-  let page: GEFUIPage;
+  let page: TrendsEarthPage;
 
   beforeEach(() => {
-    page = new GEFUIPage();
+    page = new TrendsEarthPage();
   });
 
   it('should display message saying app works', () => {
