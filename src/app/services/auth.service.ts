@@ -1,9 +1,7 @@
-
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { environment } from 'environments/environment';
 import { Router } from "@angular/router";
-
 
 @Injectable()
 export class TokenService {
@@ -26,32 +24,31 @@ export class TokenService {
     }
 }
 
-
 @Injectable()
 export class AuthService {
 
     user = null;
     token:string = null;
 
-    constructor(private http:Http, private tokenService: TokenService, private router: Router){
+    constructor(private http:HttpClient, private tokenService: TokenService, private router: Router){
 
     }
 
     login(email:string, password:string){
-        return this.http.post(`${environment.apiUrl}/auth`, {
+        return this.http.post<any>(`${environment.apiUrl}/auth`, {
             email,
             password
-        }).map(response => response.json()).toPromise()
+        }).toPromise()
         .then((body:any) => this.tokenService.token = body.access_token);
     }
 
     checkLogged(): Promise<boolean>{
-        return this.http.get(`${environment.apiUrl}/api/v1/user/me`)
-        .map(response => response.json())
-        .map(body => {
+        return this.http.get<any>(`${environment.apiUrl}/api/v1/user/me`)
+        .toPromise()
+        .then((body) => {
             this.user = body.data;
             return true;
-        }).toPromise();
+        });
     }
 
     logout(){
@@ -62,8 +59,8 @@ export class AuthService {
     }
 
     recoverPass(email:string){
-        return this.http.post(`${environment.apiUrl}/api/v1/user/${email}/recover-password`, {})
-        .map(response => response.json()).toPromise()
+        return this.http.post<any>(`${environment.apiUrl}/api/v1/user/${email}/recover-password`, {})
+        .toPromise()
         .then((body:any) => this.tokenService.token = body.access_token);
     }
 }

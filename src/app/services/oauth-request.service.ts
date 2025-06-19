@@ -1,18 +1,11 @@
-import { NgModule, Injectable } from '@angular/core';
-import { RequestOptions, RequestOptionsArgs, RequestMethod, Headers } from '@angular/http';
+import { Injectable } from '@angular/core';
+// No longer needed: import { RequestOptions, RequestOptionsArgs, RequestMethod, Headers } from '@angular/http';
 import { TokenService } from './auth.service';
 
 @Injectable()
-export class OauthRequestOptions extends RequestOptions {
-  constructor (private tokenService: TokenService) {
-    super();
-    
-  }
-  merge(options?:RequestOptionsArgs):RequestOptions {
-    if (!options.headers) {
-      options.headers = new Headers();
-    }
-    options.headers.append('Authorization', `Bearer ${this.tokenService.token}`);    
-    return super.merge(options);
-  }
-} 
+export class OauthRequestOptions {
+  constructor (private tokenService: TokenService) { }
+
+  // This class is now a placeholder unless you need custom HTTP interceptors for headers in Angular 18.
+  // Migrate any header logic to an HttpInterceptor if you need to attach tokens.
+}

@@ -8,9 +8,7 @@ import {
   APP_BASE_HREF
 } from '@angular/common';
 
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { LoginComponent } from "app/pages/login/login.component";
-
 import { CheckLoginGuard } from "app/services/check-login.guard";
 import { RecoverPasswordComponent } from "app/pages/recover-password/recover-password.component";
 
@@ -30,15 +28,12 @@ const routes: Routes = [
   },
   {
     path: 'private',
-    loadChildren: 'app/pages/private/private.module#PrivateModule'
+    loadChildren: () => import('app/pages/private/private.module').then(m => m.PrivateModule)
   }
 ];
 
 @NgModule({
-  declarations: [
-
-  ],
-  imports: [
+  imports: [RouterModule.forRoot(routes)],
   providers: [
     CheckLoginGuard,
     { provide: APP_BASE_HREF, useValue: '/' }
