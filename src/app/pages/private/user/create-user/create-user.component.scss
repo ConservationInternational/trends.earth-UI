@@ -9,11 +9,11 @@ form {
   .row {
     display: flex;
     flex-direction: row;
-    md-input-container {
+    mat-input-container {
       margin-right: 10px;
     }
   }
-  md-input-container, md-select  {
+  mat-input-container, md-select  {
     width: 100%;
     margin: 20px 0 20px 0;
   }

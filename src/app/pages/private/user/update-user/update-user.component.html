@@ -4,21 +4,21 @@
 
         <form #form="ngForm" (ngSubmit)="form.valid && createUser(form.value)"  style="display: flex;  flex-direction: column">
           <div class="row">
-            <md-input-container>
+            <mat-input-container>
                 <input mdInput placeholder="Name" required type="text" name="name" [ngModel]="user.name" #name="ngModel">
                 <md-error *ngIf="name.errors?.required">Name is required</md-error>
-            </md-input-container>
+            </mat-input-container>
             <md-select placeholder="Role" [(ngModel)]="user.role" name="role">
                 <md-option *ngFor="let role of roles" [value]="role">{{ role }}</md-option>
             </md-select>
           </div>
           <div class="row">
-            <md-input-container>
+            <mat-input-container>
                 <input mdInput placeholder="Country"  type="text" name="country" [ngModel]="user.country" >
-            </md-input-container>
-            <md-input-container>
+            </mat-input-container>
+            <mat-input-container>
                 <input mdInput placeholder="Institution"  type="text" name="institution" [ngModel]="user.institution" >
-            </md-input-container>
+            </mat-input-container>
           </div>
           <div class="row">
 

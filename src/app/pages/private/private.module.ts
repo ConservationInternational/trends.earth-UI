@@ -1,11 +1,13 @@
 import { ExecScriptComponent } from 'app/pages/private/script/exec-script/exec-script.component';
 import { NgModule } from '@angular/core';
-import { DatepickerModule } from 'angular2-material-datepicker'
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { ScriptComponent } from "app/pages/private/script/script.component";
 import { RouterModule, Routes } from "@angular/router";
 import { PrivateComponent } from "app/pages/private/private.component";
-import { MaterialModule } from "@angular/material";
 import { NgxDatatableModule } from "@swimlane/ngx-datatable";
 import { HeaderComponent } from "app/shared/header/header.component";
 import { CheckLoginGuard } from "app/services/check-login.guard";
@@ -81,14 +83,16 @@ const routes: Routes = [
     ],
     imports: [
         RouterModule.forChild(routes),
-        MaterialModule,
         NgxDatatableModule,
         CommonModule,
         FormsModule,
         SimpleNotificationsModule.forRoot(),
         CustomFormsModule,
         HttpInterceptorModule,
-        DatepickerModule
+        MatDatepickerModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatNativeDateModule,
     ],
     entryComponents: [
         LogViewerComponent,

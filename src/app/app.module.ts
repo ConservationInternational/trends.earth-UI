@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, RequestOptions } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialRootModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +14,13 @@ import { LoginComponent } from "app/pages/login/login.component";
 import { OauthRequestOptions } from "app/services/oauth-request.service";
 import { AuthService, TokenService } from "app/services/auth.service";
 import { RecoverPasswordComponent } from "app/pages/recover-password/recover-password.component";
-import { DatepickerModule } from 'angular2-material-datepicker'
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -30,9 +35,11 @@ import { DatepickerModule } from 'angular2-material-datepicker'
     HttpModule,
     BrowserAnimationsModule,
     SimpleNotificationsModule.forRoot(),
-    MaterialRootModule,
     AppRoutingModule,
-    DatepickerModule
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
   ],
   providers: [
     TokenService,

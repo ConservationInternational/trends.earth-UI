@@ -4,23 +4,23 @@
 
         <form #form="ngForm" (ngSubmit)="form.valid && createUser(form.value)"  style="display: flex;  flex-direction: column">
           <div class="row">
-            <md-input-container>
+            <mat-input-container>
                 <input mdInput placeholder="Name" required type="text" name="name" ngModel #name="ngModel">
                 <md-error *ngIf="name.errors?.required">Name is required</md-error>
-            </md-input-container>
-            <md-input-container>
+            </mat-input-container>
+            <mat-input-container>
                 <input mdInput placeholder="Email" required type="email" name="email" ngModel #email="ngModel" email>
                 <md-error *ngIf="email.errors?.required">Email is required</md-error>
                 <md-error *ngIf="email.errors?.email && !email.errors?.required">Should be a valid email</md-error>
-            </md-input-container>
+            </mat-input-container>
           </div>
           <div class="row">
-            <md-input-container>
+            <mat-input-container>
                 <input mdInput placeholder="Country" required type="text" name="country" ngModel >
-            </md-input-container>
-            <md-input-container>
+            </mat-input-container>
+            <mat-input-container>
                 <input mdInput placeholder="Institution" required type="text" name="institution" ngModel >
-            </md-input-container>
+            </mat-input-container>
           </div>
           <div class="row" *ngIf="user.role === 'ADMIN'">
             <md-select placeholder="Role" [(ngModel)]="role" name="role">

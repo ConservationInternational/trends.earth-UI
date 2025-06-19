@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build-prod": "ng build -prod -sm -ec -bh",
-    "deploy": "ng build -prod -sm -ec -bh /GEF-UI/ && gh-pages -d dist"
+    "deploy": "ng build -prod -sm -ec -bh /GEF-UI/ && gh-pages -d dist",
+    "serve:ssr:trendsearth-ui": "node dist/trendsearth-ui/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -23,9 +24,12 @@
     "@angular/material": "^18.1.1",
     "@angular/platform-browser": "18.1.1",
     "@angular/platform-browser-dynamic": "18.1.1",
+    "@angular/platform-server": "18.1.1",
     "@angular/router": "18.1.1",
+    "@angular/ssr": "^18.2.20",
     "@swimlane/ngx-datatable": "^20.1.0",
     "core-js": "2.4.1",
+    "express": "^4.18.2",
     "libphonenumber-js": "^0.4.32",
     "ng2-validation": "4.2.0",
     "ngx-toastr": "^17.0.0",
@@ -42,6 +46,7 @@
     "@angular-eslint/template-parser": "^18.0.0",
     "@angular/cli": "^18.2.20",
     "@angular/compiler-cli": "18.1.1",
+    "@types/express": "^4.17.17",
     "@types/jasmine": "2.5.38",
     "@types/node": "6.0.60",
     "eslint": "^9.0.0",

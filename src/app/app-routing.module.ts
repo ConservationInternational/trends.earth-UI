@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
 
 import {
   LocationStrategy,
@@ -40,9 +39,6 @@ const routes: Routes = [
 
   ],
   imports: [
-    MaterialModule,
-    RouterModule.forRoot(routes),
-  ],
   providers: [
     CheckLoginGuard,
     { provide: APP_BASE_HREF, useValue: '/' }
