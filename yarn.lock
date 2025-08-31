@@ -1158,10 +1158,11 @@ chownr@^1.0.1:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.1.4.tgz#6fc9d7b42d32a583596337666e7d08084da2cc6b"
 
 cipher-base@^1.0.0, cipher-base@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.3.tgz#eeabf194419ce900da3018c207d212f2a6df0a07"
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/cipher-base/-/cipher-base-1.0.6.tgz#8fe672437d01cd6c4561af5334e0cc50ff1955f7"
   dependencies:
-    inherits "^2.0.1"
+    inherits "^2.0.4"
+    safe-buffer "^5.2.1"
 
 circular-dependency-plugin@^4.2.1:
   version "4.4.0"
@@ -3327,7 +3328,7 @@ inherits@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.1.tgz#b17d08d326b4423e568eff719f91b0b1cbdf69f1"
 
-inherits@2.0.4, inherits@^2.0.3, inherits@~2.0.3:
+inherits@2.0.4, inherits@^2.0.3, inherits@^2.0.4, inherits@~2.0.3:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
 
@@ -5696,7 +5697,7 @@ safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
 
-safe-buffer@5.2.1, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@~5.2.0:
+safe-buffer@5.2.1, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@^5.2.1, safe-buffer@~5.2.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
 
